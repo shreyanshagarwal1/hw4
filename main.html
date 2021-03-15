@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>Joe's Hotdog Stand</title>
+</head>
+
+<body>
+	<script language="javascript">
+	
+	hotdog_qty = prompt("Please enter quantity of hotdogs: ","2");
+	fries_qty = prompt("Please enter quantity of fries: ","2");
+	drinks_qty = prompt("Please enter quantity of hotdogs: ","2");
+
+	amount = (hotdog_qty * 3.25) + (fries_qty * 2.00) + (drinks_qty * 1.5);
+	pre_dis_amount = amount;
+
+	if (pre_dis_amount >= 20)
+		amount = 0.9 * amount;
+
+	after_tax = amount * 1.0625;
+		
+	document.write("Order Summary: <br> <br>");
+	document.write(hotdog_qty + " Hotdogs = $3.25 X " + hotdog_qty + " = " + (hotdog_qty * 3.25).toFixed(2));
+	document.write("<br>");
+	document.write(fries_qty + " Fries = $2.00 X " + fries_qty + " = " + (fries_qty * 2.00).toFixed(2));
+	document.write("<br>");
+	document.write(drinks_qty + " Drinks = $1.5 X " + drinks_qty + " = " + (drinks_qty * 1.5).toFixed(2));
+	document.write("<br>");
+	document.write("Pre-tax Total = " + pre_dis_amount.toFixed(2));
+	document.write("<br>");
+	if (pre_dis_amount >= 20)
+	{	document.write("Discount 10% Applied <br>");
+		document.write("Pre-tax Total = " + amount.toFixed(2));
+	}
+	document.write("<br>");
+	document.write("Massachusetts 6.25% Applied");
+	document.write("<br>");
+	document.write("<br>");
+	document.write("Order Total: $" + after_tax.toFixed(2));
+		
+	</script>
+</body>
+</html>
